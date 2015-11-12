@@ -19,10 +19,11 @@ namespace Entities
             Name = name;
         }
 
-        public Professor(int id, string name)
+        public Professor(int id, string name, Classes[] teach)
         {
             Id = id;
             Name = name;
+            CanTeach = teach;
         }
 
     }
