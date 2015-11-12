@@ -8,14 +8,5 @@ namespace Entities
 {
     class Classes
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        
-        public Classes(int id, string name)
-        {
-            Id=id;
-            Name = name;
-        }
-
     }
 }

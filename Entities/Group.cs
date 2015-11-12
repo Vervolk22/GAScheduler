@@ -12,8 +12,8 @@ namespace Entities
         public string Name { get; set; }
 
         public int CountOfStudents { get; set; }
-        
-        public List<Classes> Attempts = new List<Classes>();
+
+        public List<Subject> Attempts = new List<Subject>();
 
         public Group(int id, string name)
         {
@@ -28,7 +28,7 @@ namespace Entities
             CountOfStudents = count;
         }
 
-        public Group(int id, string name, int count, List<Classes> attempts)
+        public Group(int id, string name, int count, List<Subject> attempts)
         {
             Id = id;
             Name = name;

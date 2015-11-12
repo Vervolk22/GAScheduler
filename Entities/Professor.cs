@@ -11,7 +11,7 @@ namespace Entities
         public int Id { get; set; }
         public string Name { get; set; }
 
-        public List<Classes> CanTeach = new List<Classes>();
+        public List<Subject> CanTeach = new List<Subject>();
 
         public Professor(int id, string name)
         {
@@ -19,7 +19,7 @@ namespace Entities
             Name = name;
         }
 
-        public Professor(int id, string name, List<Classes> teach)
+        public Professor(int id, string name, List<Subject> teach)
         {
             Id = id;
             Name = name;
