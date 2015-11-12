@@ -10,8 +10,8 @@ namespace Entities
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        //need dynamic collections, but now let be static array
-        public Classes[] CanTeach = new Classes[5];
+
+        public List<Classes> CanTeach = new List<Classes>();
 
         public Professor(int id, string name)
         {
@@ -19,7 +19,7 @@ namespace Entities
             Name = name;
         }
 
-        public Professor(int id, string name, Classes[] teach)
+        public Professor(int id, string name, List<Classes> teach)
         {
             Id = id;
             Name = name;

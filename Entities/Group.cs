@@ -12,8 +12,8 @@ namespace Entities
         public string Name { get; set; }
 
         public int CountOfStudents { get; set; }
-        //need a dynamic array, but it will be later
-        public Classes[] Attempts = new Classes[15];
+        
+        public List<Classes> Attempts = new List<Classes>();
 
         public Group(int id, string name)
         {
@@ -28,7 +28,7 @@ namespace Entities
             CountOfStudents = count;
         }
 
-        public Group(int id, string name, int count, Classes[] attempts)
+        public Group(int id, string name, int count, List<Classes> attempts)
         {
             Id = id;
             Name = name;
