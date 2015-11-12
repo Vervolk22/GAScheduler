@@ -4,6 +4,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GAScheduler", "GAScheduler\GAScheduler.csproj", "{8F4F8DF6-2EDB-4D00-BF8D-419042181D0D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2FE38A78-C6FD-4755-84F2-E3254FEB6039} = {2FE38A78-C6FD-4755-84F2-E3254FEB6039}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{2FE38A78-C6FD-4755-84F2-E3254FEB6039}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GA", "GA\GA.csproj", "{A4D99E5F-3295-4973-B16B-4C93085D2974}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{FFC9C6C3-21AE-4539-91F6-D4A4A96CE67C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +24,18 @@ Global
 		{8F4F8DF6-2EDB-4D00-BF8D-419042181D0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F4F8DF6-2EDB-4D00-BF8D-419042181D0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F4F8DF6-2EDB-4D00-BF8D-419042181D0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FE38A78-C6FD-4755-84F2-E3254FEB6039}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FE38A78-C6FD-4755-84F2-E3254FEB6039}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FE38A78-C6FD-4755-84F2-E3254FEB6039}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FE38A78-C6FD-4755-84F2-E3254FEB6039}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4D99E5F-3295-4973-B16B-4C93085D2974}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4D99E5F-3295-4973-B16B-4C93085D2974}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4D99E5F-3295-4973-B16B-4C93085D2974}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4D99E5F-3295-4973-B16B-4C93085D2974}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFC9C6C3-21AE-4539-91F6-D4A4A96CE67C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFC9C6C3-21AE-4539-91F6-D4A4A96CE67C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFC9C6C3-21AE-4539-91F6-D4A4A96CE67C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFC9C6C3-21AE-4539-91F6-D4A4A96CE67C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
