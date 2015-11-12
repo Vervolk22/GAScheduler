@@ -8,5 +8,7 @@ namespace Entities
 {
     public class Professor
     {
+        public int id { get; set; }
+        public string fio { get; set; }
     }
 }
