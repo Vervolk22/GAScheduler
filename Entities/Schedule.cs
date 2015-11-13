@@ -8,5 +8,12 @@ namespace Entities
 {
     class Schedule
     {
+        public int Id { get; set; }
+        public List<Classes> Classes = new List<Classes>();
+
+        public Schedule(int id, List<Classes> classes)
+        {
+            Classes = classes;
+        }
     }
 }
