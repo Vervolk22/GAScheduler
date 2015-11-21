@@ -8,14 +8,12 @@ namespace Entities
 {
     public class Group
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
+        public int id { get; set; }
+        public string name { get; set; }
+        public int countOfStudents { get; set; }
+        public Curriculum plan { get; set; }
 
-        public int CountOfStudents { get; set; }
-
-        public List<Subject> Attempts = new List<Subject>();
-
-        public Group(int id, string name)
+        /*public Group(int id, string name)
         {
             Id = id;
             Name = name;
@@ -26,14 +24,14 @@ namespace Entities
             Id = id;
             Name = name;
             CountOfStudents = count;
-        }
+        }*/
 
-        public Group(int id, string name, int count, List<Subject> attempts)
+        public Group(int id, string name, int count, Curriculum plan)
         {
-            Id = id;
-            Name = name;
-            CountOfStudents = count;
-            Attempts = attempts;
+            this.id = id;
+            this.name = name;
+            this.countOfStudents = count;
+            this.plan = plan;
         }
     }
 }
