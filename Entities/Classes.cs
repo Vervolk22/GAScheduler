@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    class Classes
+    public class Classes
     {
         public Week Week { get; set; }
         public ClassTime Time { get; set; }
