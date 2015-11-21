@@ -7,14 +7,14 @@ using Entities;
 
 namespace GA
 {
-    class RandomScheduleGenerator
+    protected internal class RandomScheduleGenerator
     {
         List<Group> groups;
         List<Curriculum> curriculum;
         List<Audience> audiences;
         List<Professor> professors;
 
-        internal RandomScheduleGenerator(List<Group> groups, List<Curriculum> curriculum,
+        protected internal RandomScheduleGenerator(List<Group> groups, List<Curriculum> curriculum,
                 List<Audience> audiences, List<Professor> professors)
         {
             this.groups = groups;
@@ -23,10 +23,10 @@ namespace GA
             this.professors = professors;
         }
 
-        internal Schedule getRandomSchedule(int scheduleId)
+        protected internal Schedule getRandomSchedule(int scheduleId)
         {
             // TODO
-            return null;
+            throw new NotImplementedException();
         }
     }
 }

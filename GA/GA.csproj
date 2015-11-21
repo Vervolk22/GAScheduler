@@ -40,6 +40,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Algorithm.cs" />
+    <Compile Include="Merger.cs" />
+    <Compile Include="Mutator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RandomScheduleGenerator.cs" />
   </ItemGroup>
