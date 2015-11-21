@@ -8,22 +8,22 @@ namespace Entities
 {
     public class Professor
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
+        public int id { get; set; }
+        public string name { get; set; }
 
-        public List<Subject> CanTeach = new List<Subject>();
+        public List<TeachPossibility> canTeach = new List<TeachPossibility>();
 
-        public Professor(int id, string name)
+        /*public Professor(int id, string name)
         {
-            Id = id;
-            Name = name;
-        }
+            this.id = id;
+            this.name = name;
+        }*/
 
-        public Professor(int id, string name, List<Subject> teach)
+        public Professor(int id, string name, List<TeachPossibility> canTeach)
         {
-            Id = id;
-            Name = name;
-            CanTeach = teach;
+            this.id = id;
+            this.name = name;
+            this.canTeach = canTeach;
         }
 
     }

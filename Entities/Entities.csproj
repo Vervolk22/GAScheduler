@@ -41,11 +41,14 @@
   <ItemGroup>
     <Compile Include="Audience.cs" />
     <Compile Include="Classes.cs" />
+    <Compile Include="Curriculum.cs" />
     <Compile Include="Group.cs" />
     <Compile Include="Professor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Schedule.cs" />
     <Compile Include="Subject.cs" />
+    <Compile Include="SubjectCurriculum.cs" />
+    <Compile Include="TeachPossibility.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
