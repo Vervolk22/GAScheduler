@@ -23,5 +23,11 @@ namespace Entities
             this.labsCount = labsCount;
             this.practiceCount = practiceCount;
         }
+
+        public static SubjectCurriculum copy(SubjectCurriculum original)
+        {
+            return new SubjectCurriculum(original.id, original.subject,
+                    original.lectureCount, original.labsCount, original.practiceCount);
+        }
     }
 }
