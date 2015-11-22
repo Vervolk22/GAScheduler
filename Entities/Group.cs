@@ -45,7 +45,7 @@ namespace Entities
         public static Group copy(Group original)
         {
             return new Group(original.id, original.name, original.countOfStudents,
-                    original.plan);
+                    Curriculum.copy(original.plan));
         }
     }
 }
