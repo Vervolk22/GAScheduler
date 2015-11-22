@@ -8,23 +8,27 @@ namespace Entities
 {
     public class Professor
     {
-        public int id { get; set; }
-        public string name { get; set; }
+        public int id { get; protected set; }
+        public string name { get; protected set; }
+        public int busyness { get; protected set; }
 
-        public List<TeachPossibility> canTeach = new List<TeachPossibility>();
-
-        /*public Professor(int id, string name)
+        public Professor(int id, string name)
         {
             this.id = id;
             this.name = name;
-        }*/
+            busyness = 0;
+        }
 
-        public Professor(int id, string name, List<TeachPossibility> canTeach)
+        /*public Professor(int id, string name, List<TeachPossibility> canTeach)
         {
             this.id = id;
             this.name = name;
             this.canTeach = canTeach;
-        }
+        }*/
 
+        public static Professor copy(Professor original)
+        {
+            return new Professor(original.id, original.name);
+        }
     }
 }
