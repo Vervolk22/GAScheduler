@@ -8,30 +8,36 @@ namespace Entities
 {
     public class Audience
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public int NumberOfSeats { get; set; }
-        public bool IsSpecial { get; set; }
+        public int id { get; protected set; }
+        public string name { get; protected set; }
+        //public int numberOfSeats { get; protected set; }
+        public ClassType audienceType { get; protected set; }
 
-        public Audience(int id, string name)
+        /*public Audience(int id, string name)
         {
-            Id = id;
-            Name = name;
+            this.id = id;
+            this.name = name;
         }
 
         public Audience(int id, string name, int count)
         {
-            Id = id;
-            Name = name;
-            NumberOfSeats = count;
+            this.id = id;
+            this.name = name;
+            //this.numberOfSeats = count;
         }
 
         public Audience(int id, string name, int count, bool isSpecial)
         {
-            Id = id;
-            Name = name;
-            NumberOfSeats = count;
-            IsSpecial = isSpecial;
+            this.id = id;
+            this.name = name;
+            //this.numberOfSeats = count;
+        }*/
+
+        public Audience(int id, string name, ClassType audienceType)
+        {
+            this.id = id;
+            this.name = name;
+            this.audienceType = audienceType;
         }
     }
 }
