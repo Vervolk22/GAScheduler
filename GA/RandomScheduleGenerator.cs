@@ -13,17 +13,18 @@ namespace GA
         List<Group> groups;
         List<Curriculum> curriculum;
         List<Audience> audiences;
-        List<Professor> professors;
+        List<Subject> subjects;
 
         LinkedList<Group> currGroups;
+        LinkedList<Subject> currSubjects;
 
         protected internal RandomScheduleGenerator(List<Group> groups, List<Curriculum> curriculum,
-                List<Audience> audiences, List<Professor> professors)
+                List<Audience> audiences, List<Subject> subjects)
         {
             this.groups = groups;
             this.curriculum = curriculum;
             this.audiences = audiences;
-            this.professors = professors;
+            this.subjects = subjects;
             rnd = new Random();
         }
 
@@ -35,7 +36,8 @@ namespace GA
             {
                 SubjectCurriculum sc = getRandomIncompleteClass(group);
                 ClassType ct = getRandomClassType(sc);
-
+                Professor professor = getBestProfessor(sc, ct);
+                Classes classes = getNewClasses(group, sc, ct, professor);
             }
         }
 
@@ -43,8 +45,14 @@ namespace GA
             currGroups = new LinkedList<Group>();
             foreach (Group g in groups)
             {
-                currGroups.AddLast(new Group(g));
+                currGroups.AddLast(Group.copy(g));
             }
+            currSubjects = new LinkedList<Subject>();
+            foreach (Subject subject in subjects)
+            {
+                currSubjects.AddLast(Subject.copy(subject));
+            }
+            
         }
 
         protected internal Group getRandomIncompleteGroup()
@@ -60,6 +68,7 @@ namespace GA
                 {
                     return currGroups.ElementAt(num);
                 }
+                if (currGroups.Count == 0) return null;
             }
         }
 
@@ -91,6 +100,28 @@ namespace GA
             if (sc.lectureCount > 0) count--;
             if (count == 0) return ClassType.lab;
             return ClassType.practice;
+        }
+
+        protected internal Professor getBestProfessor(SubjectCurriculum sc, ClassType ct)
+        {
+            int max = 200;
+            Professor result = null;
+            bool lectureRequired = ct == ClassType.Lecture ? true : false;
+            foreach (TeachPossibility tp in sc.subject.canTeached)
+            {
+                if (tp.professor.busyness < max)
+                {
+                    max = tp.professor.busyness;
+                    result = tp.professor;
+                }
+            }
+            return result;
+        }
+
+        protected internal Classes getNewClasses(Group group, SubjectCurriculum sc,
+                ClassType ct, Professor professor)
+        {
+            return null;
         }
     }
 }
