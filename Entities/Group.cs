@@ -33,5 +33,19 @@ namespace Entities
             this.countOfStudents = count;
             this.plan = plan;
         }
+
+        public bool isIncomplete()
+        {
+            if (plan.curriculum.Count > 0)
+                return true;
+            else
+                return false;
+        }
+
+        public static Group copy(Group original)
+        {
+            return new Group(original.id, original.name, original.countOfStudents,
+                    original.plan);
+        }
     }
 }
